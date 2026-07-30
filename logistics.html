@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FREMUNC — Logistics</title>
+  <meta name="description" content="Logistics for FREMUNC — the fourth annual Model United Nations conference. The sky's the limit.">
+
+  <!-- Fonts: Abril Fatface (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css?v=11">
+
+  <!-- Progressive-enhancement flag: set before paint so scroll-reveal
+       elements start hidden without a flash. -->
+  <script>document.documentElement.classList.add('has-js');</script>
+  <script src="js/main.js?v=11" defer></script>
+</head>
+<body>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="FREMUNC — home">
+        <!-- Swap this text lockup for your logo when ready:
+             <img src="assets/logo.png" alt="FREMUNC" class="brand-logo"> -->
+        <span class="brand-lockup">FREMUNC</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="logistics.html" class="active" aria-current="page">Logistics</a>
+        <a href="position-paper-guide.html">Position Paper Guide</a>
+        <a href="committees.html">Committees</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"
+              aria-expanded="false" aria-controls="mobileMenu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Full-screen mobile overlay menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-nav" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="logistics.html" class="active" aria-current="page">Logistics</a>
+      <a href="position-paper-guide.html">Position Paper Guide</a>
+      <a href="committees.html">Committees</a>
+    </nav>
+  </div>
+
+  <!-- ============================= MAIN ============================= -->
+  <main>
+
+    <!-- =================== ANIMATED BANNER (contours) ================ -->
+    <header class="page-banner page-banner--logistics">
+      <div class="page-banner-anim" aria-hidden="true">
+        <div class="contour-layer contours--a">
+          <svg viewBox="0 0 2400 400" preserveAspectRatio="none" focusable="false">
+            <path d="M0 110 C300 80 520 150 800 110 S1120 80 1200 110 C1500 80 1720 150 2000 110 S2320 80 2400 110"/>
+            <path d="M0 200 C280 175 540 235 820 200 S1140 175 1200 200 C1480 175 1740 235 2020 200 S2340 175 2400 200"/>
+            <path d="M0 300 C320 270 500 330 780 300 S1100 270 1200 300 C1520 270 1700 330 1980 300 S2300 270 2400 300"/>
+          </svg>
+        </div>
+        <div class="contour-layer contours--b">
+          <svg viewBox="0 0 2400 400" preserveAspectRatio="none" focusable="false">
+            <path d="M0 150 C260 120 560 190 800 150 S1120 120 1200 150 C1460 120 1760 190 2000 150 S2320 120 2400 150"/>
+            <path d="M0 260 C300 235 520 295 820 260 S1140 235 1200 260 C1500 235 1720 295 2020 260 S2340 235 2400 260"/>
+          </svg>
+        </div>
+        <div class="contour-layer contours--c">
+          <svg viewBox="0 0 2400 400" preserveAspectRatio="none" focusable="false">
+            <path d="M0 70 C320 45 500 100 780 70 S1100 45 1200 70 C1520 45 1700 100 1980 70 S2300 45 2400 70"/>
+            <path d="M0 350 C280 325 540 380 820 350 S1140 325 1200 350 C1480 325 1740 380 2020 350 S2340 325 2400 350"/>
+          </svg>
+        </div>
+
+        <!-- ROUTE DRAWING: the dashed route is revealed left-to-right by a
+             mask wiping across it (transform only), the destination pin drops
+             and bounces on arrival, both hold, fade, and the loop restarts. -->
+        <svg class="route-svg" viewBox="0 0 1200 400" preserveAspectRatio="none" focusable="false">
+          <defs>
+            <mask id="routeReveal">
+              <rect class="route-mask" x="0" y="0" width="1200" height="400" fill="#fff"/>
+            </mask>
+          </defs>
+          <g mask="url(#routeReveal)">
+            <path class="route-line" d="M180 300 C380 270 520 200 700 215 S980 150 1080 130"/>
+          </g>
+          <g class="route-origin">
+            <circle class="route-pin-dot" cx="180" cy="300" r="7"/>
+            <circle class="route-pin-ring" cx="180" cy="300" r="14"/>
+          </g>
+          <g class="route-dest">
+            <path class="route-pin-mark" d="M1080 118 a11 11 0 1 0 0.01 0 M1080 129 l0 14"/>
+          </g>
+        </svg>
+
+        <!-- Analog clock; the minute hand sweeps a full turn across the loop. -->
+        <svg class="banner-clock" viewBox="0 0 100 100" focusable="false">
+          <circle class="clock-face" cx="50" cy="50" r="34"/>
+          <g class="clock-ticks">
+            <line x1="50" y1="20" x2="50" y2="26"/>
+            <line x1="80" y1="50" x2="74" y2="50"/>
+            <line x1="50" y1="80" x2="50" y2="74"/>
+            <line x1="20" y1="50" x2="26" y2="50"/>
+          </g>
+          <line class="clock-hand-hour" x1="50" y1="50" x2="50" y2="34"/>
+          <line class="clock-hand-min" x1="50" y1="50" x2="50" y2="26"/>
+          <circle class="clock-pin" cx="50" cy="50" r="2.4"/>
+        </svg>
+      </div>
+      <div class="container page-banner-inner">
+        <p class="page-banner-crumb">Home / Logistics</p>
+        <h1 class="page-banner-title">Logistics</h1>
+        <p class="page-banner-subhead">Everything delegates and advisors need to know about the day — dates, venue, registration, and what to expect once you arrive.</p>
+      </div>
+    </header>
+
+    <!-- ====================== REGISTRATION CTA ======================= -->
+    <section class="section section-dusk reg-cta" aria-labelledby="reg-heading">
+      <div class="container reg-cta-inner">
+        <div>
+          <p class="eyebrow">Registration</p>
+          <h2 id="reg-heading">Secure your delegation's spot</h2>
+          <p>Fees, the deadline, and the form link are <span class="tbd">TBD</span> — registration opens soon.</p>
+        </div>
+        <!-- TBD: paste the registration form link (Google Form, Eventbrite, etc.) into href. -->
+        <a class="btn-primary reg-cta-btn" href="TBD">Register for FREMUNC</a>
+      </div>
+    </section>
+
+    <!-- ====================== CONFERENCE DETAILS ====================== -->
+    <section class="section" aria-labelledby="details-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">The essentials</p>
+          <h2 id="details-heading">Conference details</h2>
+        </div>
+
+        <dl class="info-list">
+          <div class="info-item">
+            <dt class="info-term">Date &amp; Time</dt>
+            <!-- Date confirmed; TBD: add start/end times -->
+            <dd>September 27, 2026 · Times <span class="tbd">TBD</span></dd>
+          </div>
+          <div class="info-item">
+            <dt class="info-term">Registration &amp; Fees</dt>
+            <!-- TBD: delegate fee, school/delegation fee, registration deadline -->
+            <dd class="tbd">TBD</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============================ VENUE ============================ -->
+    <section class="section" aria-labelledby="venue-heading">
+      <div class="container">
+        <div class="venue-card">
+
+          <!-- TOP PANEL -->
+          <div class="venue-top">
+            <p class="eyebrow">Conference Venue</p>
+            <!-- VENUE ADDRESS (name + address shown to visitors) — edit here if the venue moves -->
+            <h2 id="venue-heading" class="venue-name">Irvington High School</h2>
+            <p class="venue-addr">
+              41800 Blacow Road<br>
+              Fremont, California 94538
+            </p>
+          </div>
+
+          <!-- MAP PANEL -->
+          <div class="venue-map">
+            <!-- VENUE ADDRESS (Google Maps embed query) — edit here if the venue moves -->
+            <iframe class="venue-map-frame"
+                    src="https://maps.google.com/maps?q=Irvington%20High%20School,%2041800%20Blacow%20Road,%20Fremont,%20CA%2094538&amp;z=16&amp;output=embed"
+                    title="Map of Irvington High School"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <!-- Whole-map click target (the iframe has pointer-events:none). -->
+            <!-- VENUE ADDRESS (overlay search query) — edit here if the venue moves -->
+            <a class="venue-map-overlay"
+               href="https://www.google.com/maps/search/?api=1&amp;query=Irvington+High+School,+41800+Blacow+Road,+Fremont,+CA+94538"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Open Irvington High School in Google Maps">
+              <span class="venue-map-hint" aria-hidden="true">Open in Google Maps</span>
+            </a>
+
+            <!-- Top-left floating pill -->
+            <!-- VENUE ADDRESS (open-in-maps search query) — edit here if the venue moves -->
+            <a class="venue-pill venue-pill--open"
+               href="https://www.google.com/maps/search/?api=1&amp;query=Irvington+High+School,+41800+Blacow+Road,+Fremont,+CA+94538"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Open in Google Maps">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M14 4h6v6M20 4l-9 9M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"
+                      stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Open in Maps</span>
+            </a>
+
+            <!-- Bottom-center directions button -->
+            <!-- VENUE ADDRESS (directions destination) — edit here if the venue moves -->
+            <a class="venue-pill venue-pill--dir"
+               href="https://www.google.com/maps/dir/?api=1&amp;destination=Irvington+High+School,+41800+Blacow+Road,+Fremont,+CA+94538"
+               target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"
+                      stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.7"/>
+              </svg>
+              <span>Get Directions</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Below-card placeholders (fill in once known) -->
+        <ul class="venue-facts">
+          <li><span class="venue-fact-label">Parking</span> — <span class="tbd">TBD</span></li>
+          <li><span class="venue-fact-label">Check-in Entrance</span> — <span class="tbd">TBD</span></li>
+          <li><span class="venue-fact-label">Accessibility</span> — <span class="tbd">TBD</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== SCHEDULE OF THE DAY ====================== -->
+    <section class="section section-alt" aria-labelledby="schedule-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Running order</p>
+          <h2 id="schedule-heading">Schedule of the day</h2>
+        </div>
+
+        <!-- Vertical timeline in the same node/rail language as the homepage.
+             TO ADD AN ENTRY: copy one <li class="sched-item"> block, in order. -->
+        <div class="sched">
+          <div class="sched-rail" aria-hidden="true"></div>
+          <ol class="sched-list">
+            <li class="sched-item">
+              <span class="sched-node" aria-hidden="true"></span>
+              <!-- TBD: check-in window and location -->
+              <p class="sched-time tbd">TBD</p>
+              <h3 class="sched-title">Check-in</h3>
+            </li>
+            <li class="sched-item">
+              <span class="sched-node" aria-hidden="true"></span>
+              <!-- TBD: time and room -->
+              <p class="sched-time tbd">TBD</p>
+              <h3 class="sched-title">Opening Ceremony</h3>
+            </li>
+            <li class="sched-item">
+              <span class="sched-node" aria-hidden="true"></span>
+              <!-- TBD: session times, including breaks -->
+              <p class="sched-time tbd">TBD</p>
+              <h3 class="sched-title">Committee Sessions</h3>
+            </li>
+            <li class="sched-item">
+              <span class="sched-node" aria-hidden="true"></span>
+              <!-- TBD: time, awards, and dismissal -->
+              <p class="sched-time tbd">TBD</p>
+              <h3 class="sched-title">Closing Ceremony</h3>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= BEFORE YOU COME ======================== -->
+    <section class="section" aria-labelledby="prepare-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Good to know</p>
+          <h2 id="prepare-heading">Before you come</h2>
+        </div>
+
+        <dl class="info-list">
+          <div class="info-item">
+            <dt class="info-term">Dress Code</dt>
+            <!-- TBD: e.g. Western Business Attire; note anything not permitted -->
+            <dd class="tbd">TBD</dd>
+          </div>
+          <div class="info-item">
+            <dt class="info-term">Food &amp; Refreshments</dt>
+            <!-- TBD: whether lunch is provided or delegates bring their own -->
+            <dd class="tbd">TBD</dd>
+          </div>
+          <div class="info-item">
+            <dt class="info-term">Parking &amp; Directions</dt>
+            <!-- TBD: parking lots, drop-off point, nearest transit -->
+            <dd class="tbd">TBD</dd>
+          </div>
+          <div class="info-item">
+            <dt class="info-term">Contact</dt>
+            <!-- TBD: conference email address and best contact for advisors -->
+            <dd class="tbd">TBD</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============================== FAQ ============================= -->
+    <section class="section section-alt" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Questions</p>
+          <h2 id="faq-heading">Frequently asked questions</h2>
+        </div>
+
+        <!-- Native <details>/<summary> accordion — no JS required.
+             TO ADD A QUESTION: copy one <details class="faq-item"> block. -->
+        <div class="faq">
+          <details class="faq-item" open>
+            <summary>Do I need previous Model UN experience?</summary>
+            <div class="faq-answer">
+              <p>
+                Not at all. FREMUNC is designed to welcome first-time delegates, and staff
+                are on hand throughout the day to help you find your footing. Experienced
+                delegates will find plenty to challenge them, too.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Who can attend?</summary>
+            <div class="faq-answer">
+              <p>
+                FREMUNC is open to middle and high school delegates. Exact grade
+                eligibility is <span class="tbd">TBD</span>.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I register, and is there a fee?</summary>
+            <div class="faq-answer">
+              <p>
+                Use the <strong>Register</strong> button at the top of this page.
+                Registration steps, fees, and the deadline are <span class="tbd">TBD</span>.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What should I bring on the day?</summary>
+            <div class="faq-answer">
+              <p>
+                Bring your position paper (printed or on a device), something to write with
+                and on, and your student ID. A full list is <span class="tbd">TBD</span>.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Will there be awards?</summary>
+            <div class="faq-answer">
+              <p>Yes. Awards are recognized at the Closing Ceremony at the end of the day.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Who do I contact with questions?</summary>
+            <div class="faq-answer">
+              <p>
+                Reach the FREMUNC team at <span class="tbd">TBD</span>, or follow us on
+                Instagram for the latest updates.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <p class="footer-brand-name">FREMUNC</p>
+        <p class="footer-tagline">The sky's the limit.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="logistics.html">Logistics</a></li>
+          <li><a href="position-paper-guide.html">Position Paper Guide</a></li>
+          <li><a href="committees.html">Committees</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <p class="footer-contact">Contact — TBD</p>
+        <!-- Paste the real Instagram URL/handle into href below
+             (e.g. https://instagram.com/fremunc). -->
+        <a class="btn-instagram" href="https://www.instagram.com/irvingtonmun/" target="_blank" rel="noopener noreferrer" aria-label="Follow FREMUNC on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"
+                  stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/>
+          </svg>
+          Follow us on Instagram
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 FREMUNC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
