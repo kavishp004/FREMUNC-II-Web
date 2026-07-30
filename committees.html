@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FREMUNC II — Committees</title>
+  <meta name="description" content="Committees at FREMUNC II — the second annual Model United Nations conference. The sky's the limit.">
+
+  <!-- Fonts: Abril Fatface (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Progressive-enhancement flag: set before paint so scroll-reveal
+       elements start hidden without a flash. -->
+  <script>document.documentElement.classList.add('has-js');</script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="FREMUNC II — home">
+        <!-- Swap this text lockup for your logo when ready:
+             <img src="assets/logo.png" alt="FREMUNC II" class="brand-logo"> -->
+        <span class="brand-lockup">FREMUNC&nbsp;<span class="brand-mark">II</span></span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="logistics.html">Logistics</a>
+        <a href="position-paper-guide.html">Position Paper Guide</a>
+        <a href="committees.html" class="active" aria-current="page">Committees</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"
+              aria-expanded="false" aria-controls="mobileMenu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Full-screen mobile overlay menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-nav" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="logistics.html">Logistics</a>
+      <a href="position-paper-guide.html">Position Paper Guide</a>
+      <a href="committees.html" class="active" aria-current="page">Committees</a>
+    </nav>
+  </div>
+
+  <!-- ============================= MAIN ============================= -->
+  <main>
+
+    <!-- ================ ANIMATED BANNER (dot grid) ================= -->
+    <header class="page-banner page-banner--committees">
+      <div class="page-banner-anim" aria-hidden="true">
+        <!-- Dot grid is built by initPageBanner() in main.js. -->
+        <div class="banner-dotgrid" data-dotgrid></div>
+        <div class="banner-rings">
+          <span class="drift-ring drift-ring--1"></span>
+          <span class="drift-ring drift-ring--2"></span>
+          <span class="drift-ring drift-ring--3"></span>
+        </div>
+      </div>
+      <div class="container page-banner-inner">
+        <p class="page-banner-crumb">Home / Committees</p>
+        <h1 class="page-banner-title">Committees</h1>
+        <p class="page-banner-subhead">Four committees, from beginner-friendly general assemblies to faster-moving simulations. Read the background guide before you write your position paper.</p>
+      </div>
+    </header>
+
+    <!-- ======================= COMMITTEE GRID ========================= -->
+    <section class="section" aria-labelledby="committees-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">This year's lineup</p>
+          <h2 id="committees-heading">Explore the committees</h2>
+          <p>
+            Each committee debates its own topic. They come in three types — GA, Crisis, and
+            Spec — but first-time delegates are welcome in every room.
+          </p>
+        </div>
+
+        <!-- Committee-type filter — wired up in main.js (initCommitteeFilter),
+             matching each card's data-type attribute. -->
+        <div class="filter-bar" role="group" aria-label="Filter committees by type">
+          <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="ga">GA</button>
+          <button type="button" class="filter-btn" data-filter="crisis">Crisis</button>
+          <button type="button" class="filter-btn" data-filter="spec">Spec</button>
+        </div>
+
+        <!-- TO ADD A COMMITTEE: copy one entire <article class="card committee-card"> …
+             </article> block, set data-type (must be one of "ga", "crisis", or "spec"),
+             give the type pill the matching modifier class (committee-type--ga /
+             committee-type--crisis / committee-type--spec), and fill in the badge, name,
+             topic, and background-guide link. The grid is 2-up on desktop, 1 on mobile. -->
+        <div class="grid-2" id="committeeGrid">
+
+          <!-- Committee 1 -->
+          <article class="card committee-card" data-type="ga">
+            <span class="committee-ghost" aria-hidden="true">01</span>
+            <!-- TBD: abbreviation, e.g. UNSC / WHO / DISEC -->
+            <span class="committee-badge tbd">TBD</span>
+            <!-- TBD: full committee name -->
+            <h3 class="tbd">TBD</h3>
+            <div class="committee-meta">
+              <p><span class="label">Topic:</span> <span class="tbd">TBD</span></p>
+              <p><span class="label">Type:</span> <span class="committee-type committee-type--ga">GA</span></p>
+            </div>
+            <!-- TBD: paste the background guide link (PDF or Drive) into href. -->
+            <a class="btn-secondary" href="TBD">Background Guide</a>
+          </article>
+
+          <!-- Committee 2 -->
+          <article class="card committee-card" data-type="crisis">
+            <span class="committee-ghost" aria-hidden="true">02</span>
+            <span class="committee-badge tbd">TBD</span>
+            <h3 class="tbd">TBD</h3>
+            <div class="committee-meta">
+              <p><span class="label">Topic:</span> <span class="tbd">TBD</span></p>
+              <p><span class="label">Type:</span> <span class="committee-type committee-type--crisis">Crisis</span></p>
+            </div>
+            <a class="btn-secondary" href="TBD">Background Guide</a>
+          </article>
+
+          <!-- Committee 3 -->
+          <article class="card committee-card" data-type="spec">
+            <span class="committee-ghost" aria-hidden="true">03</span>
+            <span class="committee-badge tbd">TBD</span>
+            <h3 class="tbd">TBD</h3>
+            <div class="committee-meta">
+              <p><span class="label">Topic:</span> <span class="tbd">TBD</span></p>
+              <p><span class="label">Type:</span> <span class="committee-type committee-type--spec">Spec</span></p>
+            </div>
+            <a class="btn-secondary" href="TBD">Background Guide</a>
+          </article>
+
+          <!-- Committee 4 -->
+          <article class="card committee-card" data-type="ga">
+            <span class="committee-ghost" aria-hidden="true">04</span>
+            <span class="committee-badge tbd">TBD</span>
+            <h3 class="tbd">TBD</h3>
+            <div class="committee-meta">
+              <p><span class="label">Topic:</span> <span class="tbd">TBD</span></p>
+              <p><span class="label">Type:</span> <span class="committee-type committee-type--ga">GA</span></p>
+            </div>
+            <a class="btn-secondary" href="TBD">Background Guide</a>
+          </article>
+
+        </div>
+
+        <p class="committee-empty" hidden>No committees of this type yet — check back soon.</p>
+      </div>
+    </section>
+
+    <!-- ========================= HELP CALLOUT ========================= -->
+    <section class="section section-alt" aria-labelledby="help-heading">
+      <div class="container">
+        <div class="callout">
+          <p class="callout-title" id="help-heading">Not sure which committee to choose?</p>
+          <p>
+            Tell us your experience level and what you're interested in, and we'll point you
+            toward a good fit.
+          </p>
+          <!-- TBD: conference email address or contact form link. -->
+          <p><span class="label">Contact:</span> <span class="tbd">TBD</span></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <p class="footer-brand-name">FREMUNC&nbsp;<span class="brand-mark">II</span></p>
+        <p class="footer-tagline">The sky's the limit.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="logistics.html">Logistics</a></li>
+          <li><a href="position-paper-guide.html">Position Paper Guide</a></li>
+          <li><a href="committees.html">Committees</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <p class="footer-contact">Contact — TBD</p>
+        <!-- Paste the real Instagram URL/handle into href below
+             (e.g. https://instagram.com/fremunc). -->
+        <a class="btn-instagram" href="https://www.instagram.com/irvingtonmun/" target="_blank" rel="noopener noreferrer" aria-label="Follow FREMUNC II on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"
+                  stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/>
+          </svg>
+          Follow us on Instagram
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 FREMUNC II. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
