@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FREMUNC — Committees</title>
+  <meta name="description" content="Committees at FREMUNC — the fourth annual Model United Nations conference. The sky's the limit.">
+
+  <!-- Fonts: Abril Fatface (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css?v=22">
+
+  <!-- Progressive-enhancement flag: set before paint so scroll-reveal
+       elements start hidden without a flash. -->
+  <script>document.documentElement.classList.add('has-js');</script>
+  <script src="js/main.js?v=22" defer></script>
+</head>
+<body>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="FREMUNC — home">
+        <!-- Swap this text lockup for your logo when ready:
+             <img src="assets/logo.png" alt="FREMUNC" class="brand-logo"> -->
+        <span class="brand-lockup">FREMUNC</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="logistics.html">Logistics</a>
+        <a href="position-paper-guide.html">Position Paper Guide</a>
+        <a href="committees.html" class="active" aria-current="page">Committees</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"
+              aria-expanded="false" aria-controls="mobileMenu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Full-screen mobile overlay menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-nav" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="logistics.html">Logistics</a>
+      <a href="position-paper-guide.html">Position Paper Guide</a>
+      <a href="committees.html" class="active" aria-current="page">Committees</a>
+    </nav>
+  </div>
+
+  <!-- ============================= MAIN ============================= -->
+  <main>
+
+    <!-- ================ ANIMATED BANNER (dot grid) ================= -->
+    <header class="page-banner page-banner--committees">
+      <div class="page-banner-anim" aria-hidden="true">
+        <!-- GAVEL STRIKE: the arm pivots about the far end of its handle,
+             lifts, pauses, strikes the block, three rings burst out from the
+             impact point, then it bounces and rests ~3s before repeating. -->
+        <svg class="banner-gavel" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <!-- sound block -->
+          <rect class="gavel-block" x="826" y="230" width="118" height="22" rx="7"/>
+          <!-- impact rings, centred on the point of contact -->
+          <circle class="gavel-ring gavel-ring--1" cx="885" cy="230" r="17"/>
+          <circle class="gavel-ring gavel-ring--2" cx="885" cy="230" r="17"/>
+          <circle class="gavel-ring gavel-ring--3" cx="885" cy="230" r="17"/>
+          <!-- gavel; rotates about the handle end at (1040,250) -->
+          <g class="gavel-arm">
+            <line class="gavel-handle" x1="1040" y1="180" x2="880" y2="180"/>
+            <rect class="gavel-head" x="861" y="152" width="34" height="56" rx="10"/>
+          </g>
+        </svg>
+      </div>
+      <div class="container page-banner-inner">
+        <p class="page-banner-crumb">Home / Committees</p>
+        <h1 class="page-banner-title">Committees</h1>
+        <p class="page-banner-subhead">Five committees, from beginner-friendly general assemblies to fast-moving crisis rooms. Read the background guide before you write your position paper.</p>
+      </div>
+    </header>
+
+    <!-- ======================= COMMITTEE GRID ========================= -->
+    <section class="section" aria-labelledby="committees-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">This year's lineup</p>
+          <h2 id="committees-heading">Explore the committees</h2>
+          <p>
+            Each committee debates its own topic. They come in three types — GA, Crisis, and
+            Spec — but first-time delegates are welcome in every room.
+          </p>
+        </div>
+
+        <!-- Committee-type filter — wired up in main.js (initCommitteeFilter),
+             matching each card's data-type attribute. -->
+        <div class="filter-bar" role="group" aria-label="Filter committees by type">
+          <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="ga">GA</button>
+          <button type="button" class="filter-btn" data-filter="crisis">Crisis</button>
+          <button type="button" class="filter-btn" data-filter="spec">Spec</button>
+        </div>
+
+        <!-- TO ADD A COMMITTEE: copy one entire <article class="card committee-card"> …
+             </article> block, set data-type (must be one of "ga", "crisis", or "spec"),
+             give the type pill the matching modifier class (committee-type--ga /
+             committee-type--crisis / committee-type--spec), then fill in the name,
+             topic, level, chairs, contact, description, and the background-guide link. The grid is 2-up on desktop, 1 on mobile. -->
+        <div class="grid-2" id="committeeGrid">
+
+          <!-- Committee 01 -->
+          <article class="card committee-card" data-type="ga">
+            <h3>United Nations Human Rights Council</h3>
+            <div class="committee-meta">
+              <p class="committee-topic"><span class="label">Topic:</span> Protecting Neural Data and Human Rights in the Age of Brain Neurotechnology</p>
+              <p><span class="label">Type:</span> <span class="committee-type committee-type--ga">GA</span> <span class="committee-level">Advanced</span></p>
+              <p><span class="label">Chairs:</span> Nitya Misra &amp; Kshitij Markandeya</p>
+              <p><span class="label">Contact:</span> <span class="tbd">TBD</span></p>
+            </div>
+            <p class="committee-desc">As neurotechnology becomes more advanced, the ability to access information directly from the brain is challenging traditional ideas of privacy. Existing laws were created before this technology was widely available, leaving governments to determine how human rights should apply in a world where a person&rsquo;s brain activity can become a source of data. As these technologies become more common, the lack of clear international rules has created growing concern over how far their use should be allowed to go. The issue now centers on finding a balance between technological progress and protecting people from potential misuse.</p>
+            <!-- TBA: paste the background guide link (PDF or Drive) into href and
+                 remove the aria-disabled/tabindex attributes to enable the button. -->
+            <a class="btn-secondary is-pending" href="TBD" aria-disabled="true" tabindex="-1">Background Guide &mdash; TBA</a>
+          </article>
+
+          <!-- Committee 02 -->
+          <article class="card committee-card" data-type="ga">
+            <h3>United Nations Office for Outer Space Affairs</h3>
+            <div class="committee-meta">
+              <p class="committee-topic"><span class="label">Topic:</span> Developing an International Framework for Lunar Resource Extraction</p>
+              <p><span class="label">Type:</span> <span class="committee-type committee-type--ga">GA</span> <span class="committee-level">Beginner</span></p>
+              <p><span class="label">Chairs:</span> Sahil Markandeya &amp; Naisha Vora</p>
+              <p><span class="label">Contact:</span> <span class="tbd">TBD</span></p>
+            </div>
+            <p class="committee-desc">While our discoveries in space are evolving over time, lunar mining has shifted to an urgent reality. As we continue to find rare and essential resources like water and metals on the Moon, it is quickly becoming a profitable market for dominant nations and private companies, risking its environmental protection and critical research. Outdated and vague space laws have made major legal unclarity regarding the ownership and rights of the land and resources. Without clear guidelines, conflict will continue to risk permanent environmental damage and unequal access for various nations. In UNOOSA, delegates will collaborate and work to find a balanced framework to protect lunar environments and still allow innovation with equal access.</p>
+            <!-- TBA: paste the background guide link (PDF or Drive) into href and
+                 remove the aria-disabled/tabindex attributes to enable the button. -->
+            <a class="btn-secondary is-pending" href="TBD" aria-disabled="true" tabindex="-1">Background Guide &mdash; TBA</a>
+          </article>
+
+          <!-- Committee 03 -->
+          <article class="card committee-card" data-type="crisis">
+            <h3>Historical Crisis</h3>
+            <div class="committee-meta">
+              <p class="committee-topic"><span class="label">Topic:</span> The Decision to Use the Atomic Bomb: Hiroshima and Nagasaki, 1945</p>
+              <p><span class="label">Type:</span> <span class="committee-type committee-type--crisis">Crisis</span> <span class="committee-level">Historical</span></p>
+              <p><span class="label">Chairs:</span> Kavish Poddar &amp; Pradyun Adababla</p>
+              <p><span class="label">Contact:</span> <span class="tbd">TBD</span></p>
+            </div>
+            <p class="committee-desc">Germany has surrendered in WWII but the war hasn&rsquo;t ended yet. Japan is unwilling to surrender and the Soviet Union is preparing an attack against them. During this time the United States has successfully tested a new atomic weapon which could lead to devastating impact. Delegates will change the fate of the world as they decide whether Japan should surrender, if the United States should use the bomb, and how much influence the Soviet Union will gain on Asia. These choices will not only determine how the war ends but will affect the future of the world.</p>
+            <!-- TBA: paste the background guide link (PDF or Drive) into href and
+                 remove the aria-disabled/tabindex attributes to enable the button. -->
+            <a class="btn-secondary is-pending" href="TBD" aria-disabled="true" tabindex="-1">Background Guide &mdash; TBA</a>
+          </article>
+
+          <!-- Committee 04 -->
+          <article class="card committee-card" data-type="crisis">
+            <h3>Crisis</h3>
+            <div class="committee-meta">
+              <p class="committee-topic"><span class="label">Topic:</span> The Avengers Initiative: Defending Earth from Global Threats</p>
+              <p><span class="label">Type:</span> <span class="committee-type committee-type--crisis">Crisis</span></p>
+              <p><span class="label">Chairs:</span> Riya Vyas &amp; Harry Stephenson</p>
+              <p><span class="label">Contact:</span> <span class="tbd">TBD</span></p>
+            </div>
+            <p class="committee-desc">For decades, the Spirits of Vengeance have hunted only the truly guilty &mdash; until now. Something has gone wrong. The original Ghost Rider has vanished, and ordinary people across the globe are being bonded with spirits, creating new, uncontrolled riders. No one is safe from the hellfire: not the corrupt, not the careless, and possibly not even the Avengers themselves. Delegates will step into the roles of Earth&rsquo;s mightiest heroes, racing to track down the Riders, uncover the truth, and decide how far they&rsquo;re willing to go to stop a force of justice that&rsquo;s spiraling out of control.</p>
+            <!-- TBA: paste the background guide link (PDF or Drive) into href and
+                 remove the aria-disabled/tabindex attributes to enable the button. -->
+            <a class="btn-secondary is-pending" href="TBD" aria-disabled="true" tabindex="-1">Background Guide &mdash; TBA</a>
+          </article>
+
+          <!-- Committee 05 -->
+          <article class="card committee-card" data-type="spec">
+            <h3>Specialized Committee</h3>
+            <div class="committee-meta">
+              <p class="committee-topic"><span class="label">Topic:</span> Escalating Tensions Between the United States and Iran</p>
+              <p><span class="label">Type:</span> <span class="committee-type committee-type--spec">Spec</span></p>
+              <p><span class="label">Chairs:</span> Elina Mangla &amp; Shaan Sood</p>
+              <p><span class="label">Contact:</span> <span class="tbd">TBD</span></p>
+            </div>
+            <p class="committee-desc">The United States and Iran are at war. It is up to the international community to secure peace and find a solution to the active conflict. In this GA-style committee, delegates will represent countries key to the conflict, hoping to find a solution that will bring stability to the region. Delegates must take into account the deeper political, social, and economic conditions that led the two nations to war. Every resolution will demand diplomacy and compromise to restore peace within the Middle East.</p>
+            <!-- TBA: paste the background guide link (PDF or Drive) into href and
+                 remove the aria-disabled/tabindex attributes to enable the button. -->
+            <a class="btn-secondary is-pending" href="TBD" aria-disabled="true" tabindex="-1">Background Guide &mdash; TBA</a>
+          </article>
+        </div>
+
+        <p class="committee-empty" hidden>No committees of this type yet — check back soon.</p>
+      </div>
+    </section>
+
+    <!-- ========================= HELP CALLOUT ========================= -->
+    <section class="section section-alt" aria-labelledby="help-heading">
+      <div class="container">
+        <div class="callout">
+          <p class="callout-title" id="help-heading">Not sure which committee to choose?</p>
+          <p>
+            Tell us your experience level and what you're interested in, and we'll point you
+            toward a good fit.
+          </p>
+          <!-- TBD: conference email address or contact form link. -->
+          <p><span class="label">Contact:</span> <span class="tbd">TBD</span></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <p class="footer-brand-name">FREMUNC</p>
+        <p class="footer-tagline">The sky's the limit.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="logistics.html">Logistics</a></li>
+          <li><a href="position-paper-guide.html">Position Paper Guide</a></li>
+          <li><a href="committees.html">Committees</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <p class="footer-contact">Contact — TBD</p>
+        <!-- Paste the real Instagram URL/handle into href below
+             (e.g. https://instagram.com/fremunc). -->
+        <a class="btn-instagram" href="https://www.instagram.com/irvingtonmun/" target="_blank" rel="noopener noreferrer" aria-label="Follow FREMUNC on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"
+                  stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/>
+          </svg>
+          Follow us on Instagram
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 FREMUNC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
