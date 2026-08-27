@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FREMUNC — About Us</title>
+  <meta name="description" content="About FREMUNC — the fourth annual Model United Nations conference. The sky's the limit.">
+
+  <!-- Fonts: Abril Fatface (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css?v=46">
+
+  <!-- Progressive-enhancement flag: set before paint so scroll-reveal
+       elements start hidden without a flash. -->
+  <script>document.documentElement.classList.add('has-js');</script>
+  <script src="js/main.js?v=46" defer></script>
+</head>
+<body>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="FREMUNC — home">
+        <!-- Swap this text lockup for your logo when ready:
+             <img src="assets/logo.png" alt="FREMUNC" class="brand-logo"> -->
+        <span class="brand-lockup">FREMUNC</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active" aria-current="page">About Us</a>
+        <a href="logistics.html">Logistics</a>
+        <a href="position-paper-guide.html">Position Paper Guide</a>
+        <a href="committees.html">Committees</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"
+              aria-expanded="false" aria-controls="mobileMenu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Full-screen mobile overlay menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-nav" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active" aria-current="page">About Us</a>
+      <a href="logistics.html">Logistics</a>
+      <a href="position-paper-guide.html">Position Paper Guide</a>
+      <a href="committees.html">Committees</a>
+    </nav>
+  </div>
+
+  <!-- ============================= MAIN ============================= -->
+  <main>
+
+    <!-- ===================== ANIMATED BANNER (radar) ================= -->
+    <header class="page-banner page-banner--about">
+      <div class="page-banner-anim" aria-hidden="true">
+        <!-- FLIPPING PAGES: an open book seen from above. Leaves lift from the
+             right, rotate across the spine in 3D and settle on the left stack —
+             one every 1.8s on a continuous 9s loop. Each leaf catches a light
+             sheen that peaks as it passes perpendicular to the viewer. -->
+        <div class="book">
+          <div class="book-inner">
+            <span class="book-side book-side--left"></span>
+            <span class="book-side book-side--right"></span>
+            <span class="book-leaf" style="--d:0.0s"></span>
+            <span class="book-leaf" style="--d:1.8s"></span>
+            <span class="book-leaf" style="--d:3.6s"></span>
+            <span class="book-leaf" style="--d:5.4s"></span>
+            <span class="book-leaf" style="--d:7.2s"></span>
+            <span class="book-spine"></span>
+          </div>
+        </div>
+      </div>
+      <div class="container page-banner-inner">
+        <p class="page-banner-crumb">Home / About Us</p>
+        <h1 class="page-banner-title">About FREMUNC</h1>
+        <p class="page-banner-subhead">A one-day Model United Nations conference built for delegates at every level of experience.</p>
+      </div>
+    </header>
+
+    <!-- ===================== ABOUT THE CONFERENCE ===================== -->
+    <section class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">The conference</p>
+          <h2 id="about-heading">What FREMUNC is</h2>
+        </div>
+
+        <!-- Text + tall portrait photo side by side (stacks on mobile).
+             The frame hides itself if the image is missing. -->
+        <div class="about-split">
+        <div class="lead">
+          <p>
+            FREMUNC is the annual Model United Nations conference hosted by
+            <strong>Irvington High School</strong> in Fremont, California, now in its
+            fourth year. Over a single day, student delegates from across the region step
+            into the roles of diplomats — researching global issues, representing nations
+            other than their own, and debating their way toward workable solutions.
+          </p>
+          <p>
+            Delegates are assigned a country and a committee, then spend the day in
+            simulated UN sessions: opening speeches, moderated caucuses, informal
+            negotiation blocs, and finally the drafting and voting of resolutions. It is
+            equal parts research, public speaking, and thinking on your feet.
+          </p>
+          <p>
+            The conference is built to be welcoming to first-time delegates while still
+            challenging experienced ones. Our staff are on hand throughout the day to help
+            newer delegates find their footing, and committees range from approachable
+            general assemblies to faster-moving simulations. FREMUNC is open to high
+            school delegates.
+          </p>
+        </div>
+
+          <figure class="about-figure">
+            <img class="about-portrait" data-about-portrait
+                 src="assets/photos/hero-06.jpg" width="1603" height="2400"
+                 loading="lazy" decoding="async"
+                 alt="A delegate speaking during a committee session at FREMUNC 2025">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== COUNTDOWN =========================== -->
+    <section class="section countdown-section" aria-labelledby="countdown-heading">
+
+      <!-- Drifting clouds (same visual + animation as the hero) -->
+      <div class="countdown-clouds" aria-hidden="true">
+        <div class="hero-clouds hero-clouds--a">
+          <svg class="cloud-svg" viewBox="0 0 2880 900" preserveAspectRatio="none" focusable="false">
+            <g class="cloud-shapes">
+              <ellipse cx="260" cy="300" rx="180" ry="52"/>
+              <ellipse cx="380" cy="330" rx="150" ry="46"/>
+              <ellipse cx="840" cy="250" rx="210" ry="58"/>
+              <ellipse cx="960" cy="280" rx="150" ry="46"/>
+              <ellipse cx="1280" cy="360" rx="200" ry="56"/>
+            </g>
+            <g class="cloud-shapes" transform="translate(1440 0)">
+              <ellipse cx="260" cy="300" rx="180" ry="52"/>
+              <ellipse cx="380" cy="330" rx="150" ry="46"/>
+              <ellipse cx="840" cy="250" rx="210" ry="58"/>
+              <ellipse cx="960" cy="280" rx="150" ry="46"/>
+              <ellipse cx="1280" cy="360" rx="200" ry="56"/>
+            </g>
+          </svg>
+        </div>
+        <div class="hero-clouds hero-clouds--b">
+          <svg class="cloud-svg" viewBox="0 0 2880 900" preserveAspectRatio="none" focusable="false">
+            <g class="cloud-shapes">
+              <ellipse cx="160" cy="430" rx="220" ry="60"/>
+              <ellipse cx="620" cy="390" rx="170" ry="50"/>
+              <ellipse cx="1080" cy="450" rx="230" ry="62"/>
+              <ellipse cx="1360" cy="400" rx="160" ry="48"/>
+            </g>
+            <g class="cloud-shapes" transform="translate(1440 0)">
+              <ellipse cx="160" cy="430" rx="220" ry="60"/>
+              <ellipse cx="620" cy="390" rx="170" ry="50"/>
+              <ellipse cx="1080" cy="450" rx="230" ry="62"/>
+              <ellipse cx="1360" cy="400" rx="160" ry="48"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Save the date</p>
+          <h2 id="countdown-heading">Counting down to FREMUNC</h2>
+        </div>
+
+        <!-- The target date lives in js/main.js as CONFERENCE_DATE — update it there. -->
+        <div class="countdown-card" id="countdown">
+          <div class="countdown-grid">
+            <div class="countdown-unit">
+              <p class="countdown-value" data-unit="days">--</p>
+              <p class="countdown-label">Days</p>
+            </div>
+            <div class="countdown-unit">
+              <p class="countdown-value" data-unit="hours">--</p>
+              <p class="countdown-label">Hours</p>
+            </div>
+            <div class="countdown-unit">
+              <p class="countdown-value" data-unit="minutes">--</p>
+              <p class="countdown-label">Minutes</p>
+            </div>
+            <div class="countdown-unit">
+              <p class="countdown-value" data-unit="seconds">--</p>
+              <p class="countdown-label">Seconds</p>
+            </div>
+          </div>
+
+          <!-- Shown by main.js in place of the digits once the date has passed. -->
+          <p class="countdown-done" hidden>FREMUNC is here!</p>
+
+          <!-- Date confirmed; TBD: add the start time once set. -->
+          <p class="countdown-note">October 4, 2026 · Doors at 8:15 AM</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WHAT DELEGATES GAIN ======================= -->
+    <section class="section" aria-labelledby="gain-heading">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Why take part</p>
+          <h2 id="gain-heading">What delegates will gain</h2>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="9" y="2.5" width="6" height="11" rx="3" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M5 11a7 7 0 0 0 14 0M12 18v3.5" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Public Speaking Confidence</h3>
+            <p>
+              Delegates speak on the floor, defend their positions, and think on their feet —
+              in a room where everyone else is learning to do exactly the same thing.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M15.8 15.8l4.7 4.7" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Research &amp; Critical Thinking</h3>
+            <p>
+              Preparing for committee means digging into real policy, weighing competing
+              sources, and understanding an issue from a perspective that isn't your own.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3.5v17M6 20.5h12M5 8.5h14M5 8.5L2.5 14h5zM19 8.5L16.5 14h5z"
+                      stroke="currentColor" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Diplomacy &amp; Negotiation</h3>
+            <p>
+              Resolutions never pass alone. Delegates learn to build blocs, trade concessions,
+              and find middle ground between very different national interests.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
+                <ellipse cx="12" cy="12" rx="4" ry="9" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M3 12h18" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </div>
+            <h3>Global Awareness</h3>
+            <p>
+              Topics are drawn from genuine international debates, so delegates leave with a
+              sharper sense of how the world actually negotiates — and why it stalls.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 3.5h7l5 5v12a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-16a1 1 0 0 1 1-1z"
+                      stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <path d="M13 3.5v5h5M8.5 13h7M8.5 16.5h5" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Writing &amp; Resolution Drafting</h3>
+            <p>
+              From position papers to working papers to final draft resolutions, delegates
+              practice writing that has to be precise, persuasive, and procedurally correct.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="9" cy="8.5" r="3.2" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M3.5 19a5.5 5.5 0 0 1 11 0" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M16 5.6a3.2 3.2 0 0 1 0 5.8M17.5 14.2a5.5 5.5 0 0 1 3 4.8"
+                      stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Networking and New Friendships</h3>
+            <p>
+              A committee room full of delegates from other schools is one of the easiest
+              places to meet people who care about the same things you do.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== MEET THE SECRETARIAT ==================== -->
+    <section class="section section-alt" aria-labelledby="secretariat-heading">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">The team</p>
+          <h2 id="secretariat-heading">Meet the Secretariat</h2>
+          <p>The students organizing this year's conference.</p>
+        </div>
+
+        <!-- TO ADD A MEMBER: copy one entire <article class="card member-card"> …
+             </article> block below and paste it as a sibling inside this grid.
+             Four across on desktop, two on tablet, one on mobile. To remove a
+             member, delete their whole <article> block. -->
+        <div class="grid-4 secretariat-grid">
+          <article class="card member-card" data-portrait>
+            <img class="member-photo member-photo-img" data-portrait-img
+                 src="assets/shriya.jpg" alt="Shriya Surana, Secretary-General"
+                 width="1024" height="682" loading="eager" decoding="async"
+                 style="object-position: 46% 40%;">
+            <!-- Fallback if the file is ever missing — never a broken image. -->
+            <div class="member-photo member-photo-ph" role="img" aria-label="Portrait of Shriya Surana — photo coming soon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="9" r="3.6" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M4.5 19.5a7.5 7.5 0 0 1 15 0" stroke="currentColor"
+                      stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <p class="member-name">Shriya Surana</p>
+              <p class="member-role">Secretary-General</p>
+            </div>
+          </article>
+          <article class="card member-card" data-portrait>
+            <img class="member-photo member-photo-img" data-portrait-img
+                 src="assets/sonia.jpg" alt="Sonia Puri, Secretary-General"
+                 width="1024" height="682" loading="eager" decoding="async"
+                 style="object-position: 48% 42%;">
+            <!-- Fallback if the file is ever missing — never a broken image. -->
+            <div class="member-photo member-photo-ph" role="img" aria-label="Portrait of Sonia Puri — photo coming soon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="9" r="3.6" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M4.5 19.5a7.5 7.5 0 0 1 15 0" stroke="currentColor"
+                      stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <p class="member-name">Sonia Puri</p>
+              <p class="member-role">Secretary-General</p>
+            </div>
+          </article>
+          <article class="card member-card" data-portrait>
+            <img class="member-photo member-photo-img" data-portrait-img
+                 src="assets/matthew.jpg" alt="Matthew Miu, Director-General"
+                 width="1024" height="683" loading="eager" decoding="async"
+                 style="object-position: 38% 42%;">
+            <!-- Fallback if the file is ever missing — never a broken image. -->
+            <div class="member-photo member-photo-ph" role="img" aria-label="Portrait of Matthew Miu — photo coming soon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="9" r="3.6" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M4.5 19.5a7.5 7.5 0 0 1 15 0" stroke="currentColor"
+                      stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <p class="member-name">Matthew Miu</p>
+              <p class="member-role">Director-General</p>
+            </div>
+          </article>
+          <article class="card member-card" data-portrait>
+            <img class="member-photo member-photo-img" data-portrait-img
+                 src="assets/yumna.jpg" alt="Yumna Zainab, Director-General"
+                 width="1024" height="683" loading="eager" decoding="async"
+                 style="object-position: 8% 45%;">
+            <!-- Fallback if the file is ever missing — never a broken image. -->
+            <div class="member-photo member-photo-ph" role="img" aria-label="Portrait of Yumna Zainab — photo coming soon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="9" r="3.6" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M4.5 19.5a7.5 7.5 0 0 1 15 0" stroke="currentColor"
+                      stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <p class="member-name">Yumna Zainab</p>
+              <p class="member-role">Director-General</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <p class="footer-brand-name">FREMUNC</p>
+        <p class="footer-tagline">The sky's the limit.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="logistics.html">Logistics</a></li>
+          <li><a href="position-paper-guide.html">Position Paper Guide</a></li>
+          <li><a href="committees.html">Committees</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <p class="footer-contact">Contact — <a href="mailto:mun.irvington@gmail.com">mun.irvington@gmail.com</a></p>
+        <!-- Paste the real Instagram URL/handle into href below
+             (e.g. https://instagram.com/fremunc). -->
+        <a class="btn-instagram" href="https://www.instagram.com/irvingtonmun/" target="_blank" rel="noopener noreferrer" aria-label="Follow FREMUNC on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"
+                  stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/>
+          </svg>
+          Follow us on Instagram
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 FREMUNC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

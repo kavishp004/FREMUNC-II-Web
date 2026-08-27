@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FREMUNC — Position Paper Guide</title>
+  <meta name="description" content="Position paper guide for FREMUNC — the fourth annual Model United Nations conference. The sky's the limit.">
+
+  <!-- Fonts: Abril Fatface (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css?v=46">
+
+  <!-- Progressive-enhancement flag: set before paint so scroll-reveal
+       elements start hidden without a flash. -->
+  <script>document.documentElement.classList.add('has-js');</script>
+  <script src="js/main.js?v=46" defer></script>
+</head>
+<body>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="FREMUNC — home">
+        <!-- Swap this text lockup for your logo when ready:
+             <img src="assets/logo.png" alt="FREMUNC" class="brand-logo"> -->
+        <span class="brand-lockup">FREMUNC</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="logistics.html">Logistics</a>
+        <a href="position-paper-guide.html" class="active" aria-current="page">Position Paper Guide</a>
+        <a href="committees.html">Committees</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"
+              aria-expanded="false" aria-controls="mobileMenu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Full-screen mobile overlay menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-nav" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="logistics.html">Logistics</a>
+      <a href="position-paper-guide.html" class="active" aria-current="page">Position Paper Guide</a>
+      <a href="committees.html">Committees</a>
+    </nav>
+  </div>
+
+  <!-- ============================= MAIN ============================= -->
+  <main>
+
+    <!-- ================= ANIMATED BANNER (ruled paper) ============== -->
+    <header class="page-banner page-banner--papers">
+      <div class="page-banner-anim" aria-hidden="true">
+        <div class="ruled-lines"></div>
+        <div class="ruled-margin"></div>
+
+        <!-- WRITING: a nib travels left to right along a ruled line, laying
+             down a handwritten stroke behind it via stroke-dashoffset. The pen
+             lifts and fades, the ink fades a beat later, and it restarts one
+             line lower — three lines, then back to the top. -->
+        <svg class="banner-write" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <g class="write-line" style="--d:0s" transform="translate(648 168)">
+          <path class="write-ink" d="M0 0 c 26 -20 52 18 78 0 s 46 -26 74 -8 s 40 26 70 8 s 52 -24 82 -6 s 44 24 76 4 s 50 -22 84 -4 s 46 22 78 2"/>
+          <g class="write-pen">
+            <path class="pen-nib" d="M0 -13 l6 11 -6 5 -6 -5 z"/>
+            <path class="pen-body" d="M0 -13 l0 -17"/>
+          </g>
+        </g>
+        <g class="write-line" style="--d:4s" transform="translate(648 240)">
+          <path class="write-ink" d="M0 0 c 26 -20 52 18 78 0 s 46 -26 74 -8 s 40 26 70 8 s 52 -24 82 -6 s 44 24 76 4 s 50 -22 84 -4 s 46 22 78 2"/>
+          <g class="write-pen">
+            <path class="pen-nib" d="M0 -13 l6 11 -6 5 -6 -5 z"/>
+            <path class="pen-body" d="M0 -13 l0 -17"/>
+          </g>
+        </g>
+        <g class="write-line" style="--d:8s" transform="translate(648 312)">
+          <path class="write-ink" d="M0 0 c 26 -20 52 18 78 0 s 46 -26 74 -8 s 40 26 70 8 s 52 -24 82 -6 s 44 24 76 4 s 50 -22 84 -4 s 46 22 78 2"/>
+          <g class="write-pen">
+            <path class="pen-nib" d="M0 -13 l6 11 -6 5 -6 -5 z"/>
+            <path class="pen-body" d="M0 -13 l0 -17"/>
+          </g>
+        </g>
+        </svg>
+
+        <span class="ruled-cursor"></span>
+      </div>
+      <div class="container page-banner-inner">
+        <p class="page-banner-crumb">Home / Position Paper Guide</p>
+        <h1 class="page-banner-title">Position Paper Guide</h1>
+        <p class="page-banner-subhead">How to research, structure, format, and submit your position paper before the conference.</p>
+      </div>
+    </header>
+
+    <!-- ==================== POSITION PAPER GUIDE ====================== -->
+    <!-- Content mirrors the FREMUNC 2026 Position Paper Rubric doc; the button
+         at the top links out to that doc for the full version + sample paper. -->
+    <section class="section" aria-labelledby="ppg-overview-heading">
+      <div class="container">
+
+        <div class="ppg-actions">
+          <a class="btn-primary" href="https://docs.google.com/document/d/1ZCiz1EuIDT3zCZxrDWPE7IIGmmVxY0EPJUkd-HxvWtg/view"
+             target="_blank" rel="noopener noreferrer">Open the full rubric</a>
+          <p class="ppg-actions-note">
+            Opens the FREMUNC 2026 Position Paper Rubric, which also includes a
+            sample paper you can use as a template.
+          </p>
+        </div>
+
+        <div class="section-head">
+          <p class="eyebrow">Overview</p>
+          <h2 id="ppg-overview-heading">What a position paper is</h2>
+          <p>
+            A position paper is an essay explaining your country&rsquo;s or character&rsquo;s
+            position on the topic at hand, and the solutions you intend to pursue in
+            committee.
+          </p>
+        </div>
+
+        <dl class="info-list">
+          <div class="info-item">
+            <dt class="info-term">Length</dt>
+            <dd>4 pages maximum, not including works cited.</dd>
+          </div>
+          <div class="info-item">
+            <dt class="info-term">Format</dt>
+            <dd>MLA format, Times New Roman 12 pt, double spaced.</dd>
+          </div>
+          <div class="info-item">
+            <dt class="info-term">Header</dt>
+            <dd>Left-aligned, including your name, character assignment, conference, and committee.</dd>
+          </div>
+          <div class="info-item">
+            <dt class="info-term">Deadlines</dt>
+            <dd>
+              <span class="fee-row"><span class="fee-label">For research awards</span> <span class="fee-price">September 28</span></span>
+              <span class="fee-row"><span class="fee-label">For award consideration</span> <span class="fee-price">October 3</span></span>
+            </dd>
+          </div>
+          <div class="info-item">
+            <dt class="info-term">Submission</dt>
+            <dd>By email to your committee chairs.</dd>
+          </div>
+        </dl>
+
+        <div class="callout ppg-ai-callout">
+          <p class="callout-title">No AI-generated content</p>
+          <p>
+            Delegates may not use or paraphrase any content generated by artificial
+            intelligence. If your position paper is determined to have been written by AI,
+            you will be immediately disqualified from any awards.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= THE FOUR SECTIONS ===================== -->
+    <section class="section section-alt" aria-labelledby="ppg-structure-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Structure</p>
+          <h2 id="ppg-structure-heading">The four sections</h2>
+          <p>Every position paper is made up of these four parts, in this order.</p>
+        </div>
+          <div class="guide-part">
+            <h3>Past and Current International Action <span class="guide-len">~1 paragraph</span></h3>
+            <p>Historical context and background on the topic at hand. This section does not include your delegation&rsquo;s policy or any previous action your delegation has taken, unless it is globally relevant.</p>
+          </div>
+          <div class="guide-part">
+            <h3>Country / Character Policy <span class="guide-len">~2 paragraphs</span></h3>
+            <p>Your country&rsquo;s or character&rsquo;s stance and policies on the topic. This section covers only action your country has already taken &mdash; no proposed solutions.</p>
+          </div>
+          <div class="guide-part">
+            <h3>Proposed Solutions <span class="guide-len">3&ndash;6 paragraphs</span></h3>
+            <p>The main part of your paper. Lay out the solutions you intend to pursue in committee. They should be realistic and consistent with your character policy.</p>
+          </div>
+          <div class="guide-part">
+            <h3>Response to Guiding Questions <span class="guide-len">~2 paragraphs</span></h3>
+            <p>Respond to 2 of the guiding questions provided in your committee&rsquo;s background guide.</p>
+          </div>
+      </div>
+    </section>
+
+    <!-- ============================= RUBRIC ============================ -->
+    <section class="section" aria-labelledby="ppg-rubric-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">How papers are scored</p>
+          <h2 id="ppg-rubric-heading">Rubric</h2>
+          <p>Each criterion is weighted as shown. Scroll the table sideways on a phone.</p>
+        </div>
+
+        <div class="rubric-scroll">
+          <table class="rubric">
+            <caption class="visually-hidden">FREMUNC 2026 position paper rubric</caption>
+            <thead>
+              <tr>
+                <th scope="col">Criterion</th>
+                <th scope="col">Excellent <span class="rubric-pts">(4)</span></th>
+                <th scope="col">Good <span class="rubric-pts">(2)</span></th>
+                <th scope="col">Adequate <span class="rubric-pts">(2)</span></th>
+                <th scope="col">Poor <span class="rubric-pts">(1)</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span class="rubric-crit">Past and Current International Action</span><span class="rubric-weight">15%</span></th>
+                <td>Provides a comprehensive overview of the committee topic without restating the background guide, includes key events relevant to the topic</td>
+                <td>Provides a mostly comprehensive overview of the committee topic, somewhat restating the background guide, includes key events relevant to the topic</td>
+                <td>Provides an overview of the committee topic, largely restates the background guide, includes few key events relevant to the topic</td>
+                <td>Provides an overview of the committee topic, mostly restates the background guide, includes no key events relevant to the topic</td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="rubric-crit">Country / Character Policy</span><span class="rubric-weight">25%</span></th>
+                <td>Provides detailed explanation on delegation&rsquo;s position regarding the topic, includes key decisions made by their delegation</td>
+                <td>Provides detailed explanation on delegation&rsquo;s position regarding the topic, includes some key decisions made by their delegation</td>
+                <td>Provides explanation on delegation&rsquo;s position regarding the topic, includes few key decisions made by their delegation</td>
+                <td>Does not provide explanation on delegation&rsquo;s position regarding the topic, includes no key decisions made by their delegation</td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="rubric-crit">Solutions</span><span class="rubric-weight">45%</span></th>
+                <td>Provides a very detailed plan of their solution that directly addresses the topic at hand. Proposed solutions are realistic and in line with character policy.</td>
+                <td>Provides a detailed plan of their solution that directly addresses the topic at hand. Proposed solutions are mostly realistic and in line with character policy.</td>
+                <td>Provides solutions that do not clearly address the topic at hand. Proposed solutions are somewhat realistic and in line with character policy.</td>
+                <td>Provides solutions that don&rsquo;t directly address the topic at hand. Proposed solutions are unrealistic and not in line with character policy.</td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="rubric-crit">Response to Guiding Questions</span><span class="rubric-weight">10%</span></th>
+                <td>Clearly responds to 2 guiding questions, making sure that their answer is realistic and follows country/character policy</td>
+                <td>Clearly responds to 2 guiding questions, mostly makes sure that their answer is realistic and follows country/character policy</td>
+                <td>Responds to 2 guiding questions, answers are somewhat realistic and follows country/character policy</td>
+                <td>Responds to 1 or fewer guiding questions, answers are not realistic and do not follow country/character policy</td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="rubric-crit">Formatting</span><span class="rubric-weight">5%</span></th>
+                <td>Position paper is properly formatted in MLA with proper citations</td>
+                <td>Position paper is mostly formatted in MLA, with a small amount of errors/typos</td>
+                <td>Position paper is mostly formatted in MLA, with a noticeable amount of errors/typos</td>
+                <td>Position paper is not formatted in MLA, with a large amount of errors/typos</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <p class="footer-brand-name">FREMUNC</p>
+        <p class="footer-tagline">The sky's the limit.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="logistics.html">Logistics</a></li>
+          <li><a href="position-paper-guide.html">Position Paper Guide</a></li>
+          <li><a href="committees.html">Committees</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <p class="footer-contact">Contact — <a href="mailto:mun.irvington@gmail.com">mun.irvington@gmail.com</a></p>
+        <!-- Paste the real Instagram URL/handle into href below
+             (e.g. https://instagram.com/fremunc). -->
+        <a class="btn-instagram" href="https://www.instagram.com/irvingtonmun/" target="_blank" rel="noopener noreferrer" aria-label="Follow FREMUNC on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"
+                  stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/>
+          </svg>
+          Follow us on Instagram
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 FREMUNC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
