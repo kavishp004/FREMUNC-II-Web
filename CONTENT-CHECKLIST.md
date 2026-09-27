@@ -14,24 +14,18 @@ placeholder links anywhere on the site**. This is everything that remains.
   Poor (1). "Good" and "Adequate" are both worth 2, and "Good" is probably meant to be 3.
   Its award deadline also still says October 3, but the conference is October 4.
 
-## 2. One missing email
-
-- **Harry Stephenson** (Crisis / Avengers) — his address wasn't in the Manage-access
-  screenshots, so his card shows Riya's address plus "(Harry Stephenson — email TBD)".
-  Send it and it's a one-line fix. Every other chair's address is live.
-
-## 3. Optional
+## 2. Optional
 
 - **Secretariat bios.** The four cards show photo, name and role, which reads as finished —
   nothing looks like a gap. Add bios only if you want them.
 
-## 4. Housekeeping (invisible to visitors)
+## 3. Housekeeping (invisible to visitors)
 
 Duplicate originals in `assets/` and `assets/photos/` that would upload to GitHub:
 the `Untitled design (3)…png` files and the `WhatsApp Image…` files. Say the word and
 I'll delete them.
 
-## 5. Not yet published
+## 4. Not yet published
 
 Everything is **local only**. GitHub and Vercel still show the old version until you
 re-upload — and drag the `assets`, `css` and `js` **folders**, not the files inside them.
